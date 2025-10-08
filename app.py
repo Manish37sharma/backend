@@ -100,10 +100,8 @@ def search_youtube_videos(query: str, max_results: int = 3) -> List[Dict[str, st
 app = Flask(__name__)
 CORS(app)
 logging.basicConfig(
-	level=logging.DEBUG,
-	format='%(asctime)s %(levelname)s %(message)s',
-	filename='backend/debug.log',
-	filemode='w'
+    level=logging.DEBUG,
+    format='%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s'
 )
 
 # Week 3: simple JSON user activity storage

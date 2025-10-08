@@ -9,7 +9,7 @@ import pathlib
 import requests
 
 # Optional Gemini API key for summaries (Week 5)
-GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
+GEMINI_API_KEY = 'AIzaSyB2UgddEWNTgVOKlYGNF3TN0h6iJxAw3Ts'
 
 # --- Sample dataset (Week 2) ---
 # Each resource has tags that describe it. We'll score by tag overlap with user topics.
@@ -66,7 +66,7 @@ def score_resources_by_topics(resources: List[Dict[str, Any]], topics: List[str]
 	return result
 
 # Week 3: Optional YouTube API integration
-YOUTUBE_API_KEY = os.getenv('YOUTUBE_API_KEY')
+YOUTUBE_API_KEY = 'AIzaSyDaooWT9-ax2BJToqq8Mj4jJEW9rhRQIDA'
 
 def search_youtube_videos(query: str, max_results: int = 3) -> List[Dict[str, str]]:
 	if not YOUTUBE_API_KEY or not query:
